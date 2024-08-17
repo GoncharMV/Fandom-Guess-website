@@ -1,13 +1,27 @@
-  :root{
-  --color-1: #21D4FD
-  --color-2: #B721FF
-  --color-3: #08AEEA
-  --color-4: #2AF598
-  }
+
+
+div.scroll_images {
+	background-color: #08AEEA;
+	overflow: auto;
+	white-space: nowrap;
+	width: 50%;
+	margin: auto;
+}
+
+div.scroll_images img {
+	padding 10px;
+}
   
+
+.banner-google {
+	width: 100%;
+	max-width:354px;
+}
+
+
 .header {
 	position: relative;
-
+	height: 80vh;
 	display: block;
 }
 
@@ -94,7 +108,7 @@
 
 .phone:before {
 	background-color: #08AEEA;
-	background-image: url("phone.png");
+	background-image: url("images/phone1.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 16rem;
@@ -110,3 +124,4 @@
 	border: 1px solid #f1f1f1;
 	border-radius: 2rem;
 }
+
