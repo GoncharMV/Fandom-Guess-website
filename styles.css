@@ -1,15 +1,147 @@
+* {
+  box-sizing: border-box;
+}
 
+.timeline {
+	background:  linear-gradient(-19deg, #153B51, #2DA7AF);
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+
+.container {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+.container::after {
+	content: '';
+	position: absolute;
+	width: 25px; 
+	height: 25px; 
+	right: -17px;
+	background-color: white;
+	border: 4px solid #FF9F55;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	left: 50%;
+}
+
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+	left: -16px;
+}
+
+.content {
+	padding: 20px 30px;
+	background-color: white;
+	position: relative; 
+	border-radius: 6px;
+}
+
+.credit_column {
+	float: left;
+	width: 27%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+.credit_container {
+	padding: 0 16px;
+}
+
+.credit_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.credit_container::after, .credit_row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.title {
+	color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #2DA7AF;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #aadff2;
+}
+
+h2 {
+	font-size: 2rem;
+	margin: 2rem;
+}
 
 div.scroll_images {
-	background-color: #08AEEA;
+	background-color: #2DA7AF;
 	overflow: auto;
 	white-space: nowrap;
-	width: 50%;
+	width: 80%;
 	margin: auto;
 }
 
 div.scroll_images img {
-	padding 10px;
+	padding: .1rem;
 }
   
 
@@ -19,7 +151,7 @@ div.scroll_images img {
 }
 
 .main {
-	padding-bottom: 2.5rem;
+	padding: 2.5rem;
 }
 
 .header {
@@ -40,7 +172,7 @@ div.scroll_images img {
 	right: 0;
 	width: 100%;
 	height: 2.5rem;
-	background:  linear-gradient(-19deg, #B721FF, #21D4FD);
+	background:  linear-gradient(-19deg, #153B51, #2DA7AF);
 	overflow: hidden;
 	z-index: -1;
 }
@@ -52,7 +184,7 @@ div.scroll_images img {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background:  linear-gradient(19deg, #21D4FD, #B721FF);
+	background:  linear-gradient(19deg, #2DA7AF, #153B51);
 	transform-origin: 0px 0px;
 	transform: skewY(-10deg);
 	overflow: hidden;
@@ -116,6 +248,7 @@ div.scroll_images img {
 	background: black;
 	padding: 4rem .6rem 0;
 	border-radius: 2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	text-align: center;
 	
 	
@@ -125,15 +258,16 @@ div.scroll_images img {
 .phone:after {
 	content: '';
 	display: block;
+	
 }
 
 .phone:before {
-	background-color: #08AEEA;
 	background-image: url("images/phone1.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 16rem;
 	padding-top: 177.5%;
+	
 	
 }
 
@@ -146,3 +280,21 @@ div.scroll_images img {
 	border-radius: 2rem;
 }
 
+
+@media(max-width: 758px) {
+	.phone {
+		display: none;
+	}
+	
+	.header_float {
+	width: 100%;
+	float: left;
+	
+	}
+	
+	.credit_column {
+		width: 100%;
+		display: block;
+	}
+
+}
